@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="borderPane" prefHeight="450.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.40" fx:controller="de.ostfalia.prog.ws15.control.GridController">
+    <left>
+        <GridPane prefHeight="400.0" prefWidth="228.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="334.0" minHeight="10.0" prefHeight="334.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <GridPane prefHeight="371.0" prefWidth="100.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <ImageView id="E" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true">
+                    <Image url="@/BlockE.png"/>
+                </ImageView>
+                <ImageView id="Z" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.columnIndex="1">
+                    <Image url="@/BlockZ.png"/>
+                </ImageView>
+                <ImageView id="W" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.rowIndex="1">
+                    <Image url="@/BlockW.png"/>
+                </ImageView>
+                <ImageView id="C" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Image url="@/BlockC.png"/>
+                </ImageView>
+                <ImageView id="B" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.rowIndex="2">
+                    <Image url="@/BlockB.png"/>
+                </ImageView>
+                <ImageView id="F" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.rowIndex="3">
+                    <Image url="@/BlockF.png"/>
+                </ImageView>
+                <ImageView id="N" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <Image url="@/BlockN.png"/>
+                </ImageView>
+                <ImageView id="X" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <Image url="@/BlockX.png"/>
+                </ImageView>
+                <ImageView id="A" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.rowIndex="4">
+                    <Image url="@/BlockA.png"/>
+                </ImageView>
+                <ImageView id="R" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <Image url="@/BlockR.png"/>
+                </ImageView>
+                <ImageView id="I" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.rowIndex="5">
+                    <Image url="@/BlockI.png"/>
+                </ImageView>
+                <ImageView id="O" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <Image url="@/BlockO.png"/>
+                </ImageView>
+                <ImageView id="D" fitHeight="50.0" fitWidth="50.0" onDragDetected="#dragHandler" pickOnBounds="true"
+                           preserveRatio="true" GridPane.rowIndex="6">
+                    <Image url="@/BlockD.png"/>
+                </ImageView>
+            </GridPane>
+            <GridPane GridPane.rowIndex="1">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <Button fx:id="updateButton" mnemonicParsing="false" onMouseReleased="#update" text="Update"/>
+                <Button mnemonicParsing="false" onMouseReleased="#updateTask" text="Step"
+                        GridPane.columnIndex="1"/>
+                <Button mnemonicParsing="false" onAction="#setInputs" text="Set Inputs" GridPane.rowIndex="1"/>
+                <TextField fx:id="inputsField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            </GridPane>
+        </GridPane>
+    </left>
+    <top>
+        <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+            <Menu mnemonicParsing="false" text="File">
+                <MenuItem mnemonicParsing="false" onAction="#createNewGrid" text="New Grid"/>
+                <MenuItem mnemonicParsing="false" onAction="#resetGrid" text="Reset Grid"/>
+                <MenuItem mnemonicParsing="false" onAction="#readCommands" text="Read From File"/>
+                <MenuItem mnemonicParsing="false" onAction="#close" text="Close"/>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit"/>
+            <Menu mnemonicParsing="false" text="Help">
+                <MenuItem mnemonicParsing="false" text="About"/>
+            </Menu>
+        </MenuBar>
+    </top>
+</BorderPane>
